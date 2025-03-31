@@ -1,12 +1,10 @@
 <?php
-$host = "localhost";
-$user = "root";
-$pass = "";
-$dbname = "ummah_travel";
-
-$mysqli = mysqli_connect($host, $user, $pass, $dbname);
-
-if (!$mysqli) {
-    die("Koneksi gagal: " . mysqli_connect_error());
+$host = "localhost"; 
+$user = "root"; 
+$password = ""; 
+$database = "nasrotul_ummah"; 
+$conn = new mysqli($host, $user, $password, $database);
+if ($conn->connect_error) {
+    die("Koneksi gagal: " . $conn->connect_error);
 }
 ?>

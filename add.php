@@ -1,5 +1,5 @@
 <?php
-include_once("config.php");
+include_once("connector.php");
 
 if (isset($_POST['submit'])) {
     $name = $_POST['name'];
