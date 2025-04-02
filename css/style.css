@@ -1,0 +1,441 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f8f9fa;
+}
+
+header {
+    background: linear-gradient(135deg, #5a1d78, #8e2e7d); 
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.hero {
+    height: 250px;
+    background: #9e4dbf; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 4px solid #5a1d78;
+}
+
+.paket-list {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.kontak form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin-top: 20px;
+}
+
+.kontak input, .kontak textarea {
+    margin-bottom: 15px;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #8e2e7d; 
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #5a1d78;
+    color: white;
+}
+
+/* index.php*/
+.hero {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.news, .haji, .paket {
+    text-align: center;
+    padding: 20px;
+}
+
+.news-container, .haji-container, .paket-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.news-box, .haji-box, .paket-card {
+    background: #8e2e7d;
+    padding: 20px;
+    border-radius: 12px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.news-box img, .haji-box img, .paket-card img {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+}
+
+.paket-title {
+    background: #5a1d78;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/*data.php/variasi kamar  */
+.room-option {
+    display: inline-block;
+    background-color: #7145a7; 
+    padding: 20px;
+    margin: 15px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    width: 30%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.room-option:hover {
+    background-color: #9e4dbf;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.room-option p {
+    margin: 5px 0;
+}
+
+/* syarat.php*/
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+.main-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.persyaratan {
+    width: 70%; 
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.syarat-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.syarat-box h2 {
+    color: #4A148C;
+    margin-bottom: 10px;
+}
+
+.syarat-box ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.syarat-box li {
+    margin: 5px 0;
+}
+
+.sidebar {
+    width: 30%; 
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.search-box button {
+    padding: 8px 12px;
+    background: #4A148C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.rekomendasi {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.rekom-box {
+    background: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.rekom-box img {
+    width: 100%;
+    height: 100px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.rekom-box p {
+    margin-top: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .persyaratan {
+        width: 100%;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+}
+
+
+/* kontak.php*/
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.kontak-box.besar {
+    background: #5a1d78; 
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+}
+
+.kontak-info {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 900px;
+}
+
+.kontak-box.kecil {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(74, 20, 140, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: black;
+    width: 280px;
+    transition: 0.3s ease-in-out;
+    text-align: center;
+}
+
+.kontak-box.kecil img {
+    width: 30px;
+    height: 30px;
+}
+
+.kontak-box.kecil:hover {
+    background: #5a1d78;
+    color: white;
+}
+
+/* data.php */
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.package-info {
+    width: 30%;
+    background-color: #8e2e7d; 
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.package-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.package-info ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.package-info li {
+    margin: 5px 0;
+}
+
+.jamaah-form {
+    width: 65%;
+    background-color: #8e2e7d;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.jamaah-form h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.personal-info input, .address-info input {
+    width: 48%;
+    padding: 12px;
+    margin: 10px 1%;
+    border: 1px solid #8e2e7d;
+    border-radius: 5px;
+}
+
+.address-info input {
+    width: 100%;
+}
+
+.room-selection {
+    margin-top: 20px;
+}
+
+.room-option {
+    display: inline-block;
+    background-color: #6f299d;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    width: 30%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.room-option:hover {
+    background-color: #9e4dbf;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    background-color: #723896;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #6e3b82;
+}
+
+button .icon {
+    margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .package-info, .jamaah-form {
+        width: 90%;
+    }
+
+    .personal-info input {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
