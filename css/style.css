@@ -335,63 +335,52 @@ footer {
 .container {
     display: flex;
     justify-content: space-between;
+    gap: 20px;
     padding: 20px;
+}
+
+.package-info, .jamaah-form {
+    background: #8e2e7d;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
 }
 
 .package-info {
     width: 30%;
-    background-color: #8e2e7d; 
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.package-info h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.package-info ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.package-info li {
-    margin: 5px 0;
 }
 
 .jamaah-form {
     width: 65%;
-    background-color: #8e2e7d;
-    padding: 20px;
-    border-radius: 10px;
 }
 
-.jamaah-form h3 {
+.jamaah-form h3, .package-info h3 {
     font-size: 20px;
     margin-bottom: 10px;
 }
 
+.personal-info, .address-info {
+    display: flex;
+    flex-direction: column;
+}
+
 .personal-info input, .address-info input {
-    width: 48%;
+    width: 100%;
     padding: 12px;
-    margin: 10px 1%;
+    margin: 10px 0;
     border: 1px solid #8e2e7d;
     border-radius: 5px;
 }
 
-.address-info input {
-    width: 100%;
-}
-
 .room-selection {
     margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
 }
 
 .room-option {
-    display: inline-block;
     background-color: #6f299d;
     padding: 15px;
-    margin: 10px;
     border-radius: 5px;
     text-align: center;
     cursor: pointer;
@@ -402,11 +391,27 @@ footer {
 
 .room-option:hover {
     background-color: #9e4dbf;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+input[type="text"], input[type="email"], input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box; 
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.room-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 button {
-    display: flex;
-    align-items: center;
     background-color: #723896;
     color: white;
     border: none;
@@ -414,6 +419,8 @@ button {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 20px;
+    display: flex;
+    align-items: center;
 }
 
 button:hover {
@@ -423,6 +430,7 @@ button:hover {
 button .icon {
     margin-left: 10px;
 }
+
 
 @media (max-width: 768px) {
     .container {
