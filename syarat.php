@@ -1,7 +1,10 @@
 <?php include 'includes/header.php'; ?>
 
+<link rel="stylesheet" href="css/style.css">
+
 <section class="container">
     <div class="main-content">
+        
         <div class="persyaratan">
             <div class="syarat-box">
                 <h2>Persyaratan Umroh</h2>
@@ -27,7 +30,9 @@
         <aside class="sidebar">
             <div class="search-box">
                 <input type="text" placeholder="Cari syarat..." />
-                <button type="submit">Cari</button>
+                <button type="submit">
+                    🔍
+                </button>
             </div>
 
             <h3>Rekomendasi Paket</h3>
