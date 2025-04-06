@@ -9,7 +9,6 @@ $paket = [
     'hotel_makkah' => 'Al-Marwah Rayyhan'
 ];
 ?>
-<link rel="stylesheet" href="css/persyaratan.css">
 
 <form action="data.php" method="POST">
     <div class="container">
