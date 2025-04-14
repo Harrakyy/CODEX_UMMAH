@@ -1,3 +1,8 @@
+
+CREATE DATABASE IF NOT EXISTS nasrotul_ummah;
+USE nasrotul_ummah;
+
+
 CREATE TABLE jamaah (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nama VARCHAR(255) NOT NULL,
@@ -10,3 +15,33 @@ CREATE TABLE jamaah (
     waktu_keberangkatan TIME NOT NULL,
     berangkat_dari VARCHAR(255) NOT NULL
 );
+
+
+CREATE TABLE slider (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    image VARCHAR(255),
+    title VARCHAR(255)
+);
+
+
+CREATE TABLE news (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    image VARCHAR(255),
+    description TEXT
+);
+
+CREATE TABLE haji (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    image VARCHAR(255),
+    description TEXT
+);
+
+
+CREATE TABLE paket_umroh (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    image VARCHAR(255),
+    title VARCHAR(255),
+    price INT,
+    departure DATE
+);
+
