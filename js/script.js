@@ -2,6 +2,7 @@ let slides = document.querySelectorAll('.slide');
 let dots = document.querySelectorAll('.dot');
 let index = 0;
 
+
 function showSlide(i) {
     slides.forEach(slide => slide.classList.remove('active'));
     dots.forEach(dot => dot.classList.remove('active'));
