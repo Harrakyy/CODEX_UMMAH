@@ -34,12 +34,9 @@ function currentSlide(index) {
     showSlide(index);
 }
 
-// Inisialisasi pertama
 showSlide(slideIndex);
 
-// Opsional: autoplay setiap 5 detik
 setInterval(nextSlide, 5000);
 </script>
-
 </body>
 </html>
