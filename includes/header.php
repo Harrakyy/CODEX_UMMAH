@@ -9,7 +9,9 @@
 <body>
 
 <header>
-    <div class="logo">🌍 Nasrotul Ummah</div>
+<div class="logo">
+    <img src="jpg/logo NSm.png" alt="logo" style="height: 40px; width: auto;"> Nasrotul Ummah
+     </div>
     <nav>
         <ul>
             <li><a href="index.php">Beranda</a></li>
