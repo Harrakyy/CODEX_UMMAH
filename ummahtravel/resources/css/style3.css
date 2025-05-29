@@ -1,0 +1,47 @@
+body {
+  padding-top: 100px;
+}
+
+.navbar .nav-link {
+  position: relative;
+  display: inline-block;
+  padding: 10px 15px;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  width: 100%;
+  height: 2px;
+  background-color: #00ff8c;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.navbar .nav-link.active::after,
+.navbar .nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+
+footer {
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+footer h5 {
+  font-weight: bold;
+}
+
+footer ul {
+  padding-left: 0;
+}
+
+footer li {
+  margin-bottom: 5px;
+}
+

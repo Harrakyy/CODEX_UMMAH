@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nasrotul Ummah</title>
+  <title>Tentang kami | Nasrotul Ummah</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style2.css">
 </head>
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent position-absolute w-100 z-3">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top w-100 z-3">
     <div class="container">
       <a class="navbar-brand arabic-logo" href="#">Nasrotul Ummah</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -18,8 +18,8 @@
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Beranda</a></li>
-          <li class="nav-item"><a class="nav-link" href="tentangkami.html">Tentang Kami</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link active" href="tentangkami.html">Tentang Kami</a></li>
           <li class="nav-item"><a class="nav-link" href="daftarumroh.html">Daftar Umroh</a></li>
           <li class="nav-item"><a class="nav-link" href="umrohsaya.html">Umroh Saya</a></li>
           <li class="nav-item"><a class="nav-link" href="hubungi-kami.html">Hubungi Kami</a></li>
@@ -32,8 +32,8 @@
   <header class="jumbotron d-flex align-items-center justify-content-center text-white text-center">
     <div class="overlay"></div>
     <div class="content position-relative">
-      <h1 class="display-4 fw-bold">Nasrotul Ummah</h1>
-      <p class="lead">Umroh sesuai Sunnah</p>
+      <h1 class="display-4 fw-bold">Tentang Nasrotul Ummah</h1>
+      <p class="lead">Nasrotul Ummah adalah biro perjalanan haji dan umrah yang sesuai sunnah</p>
     </div>
   </header>
 
@@ -81,7 +81,7 @@
 </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="script.js"></script>
+  <script src="script2.js"></script>
 </body>
 </html>
 
