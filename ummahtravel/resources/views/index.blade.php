@@ -10,7 +10,7 @@
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent position-absolute w-100 z-3">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top w-100 z-3">
     <div class="container">
       <a class="navbar-brand arabic-logo" href="#">Nasrotul Ummah</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">

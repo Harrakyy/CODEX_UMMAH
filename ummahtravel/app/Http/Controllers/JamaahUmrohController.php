@@ -7,59 +7,38 @@ use Illuminate\Http\Request;
 
 class JamaahUmrohController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        //
+        return JamaahUmroh::all();
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate([
+            'user_id' => 'nullable|exists:users,id',
+            'email' => 'required|email',
+            'nama' => 'required|string',
+            'nomor_telepon' => 'required|string',
+            'tanggal_keberangkatan' => 'required|date',
+        ]);
+
+        return JamaahUmroh::create($data);
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(JamaahUmroh $jamaahUmroh)
+    public function show($id)
     {
-        //
+        return JamaahUmroh::findOrFail($id);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(JamaahUmroh $jamaahUmroh)
+    public function update(Request $request, $id)
     {
-        //
+        $jamaah = JamaahUmroh::findOrFail($id);
+        $jamaah->update($request->only(['user_id', 'email', 'nama', 'nomor_telepon', 'tanggal_keberangkatan']));
+        return $jamaah;
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, JamaahUmroh $jamaahUmroh)
+    public function destroy($id)
     {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(JamaahUmroh $jamaahUmroh)
-    {
-        //
+        return JamaahUmroh::destroy($id);
     }
 }

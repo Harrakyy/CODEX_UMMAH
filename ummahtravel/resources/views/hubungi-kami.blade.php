@@ -18,11 +18,11 @@
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="index.php">Beranda</a></li>
-          <li class="nav-item"><a class="nav-link" href="tentangkami.php">Tentang Kami</a></li>
-          <li class="nav-item"><a class="nav-link" href="daftarumroh.php">Daftar Umroh</a></li>
-          <li class="nav-item"><a class="nav-link" href="umrohsaya.php">Umroh Saya</a></li>
-          <li class="nav-item"><a class="nav-link active" href="hubungi-kami.php">Hubungi Kami</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="tentangkami.html">Tentang Kami</a></li>
+          <li class="nav-item"><a class="nav-link" href="daftarumroh.html">Daftar Umroh</a></li>
+          <li class="nav-item"><a class="nav-link" href="umrohsaya.html">Umroh Saya</a></li>
+          <li class="nav-item"><a class="nav-link active" href="hubungi-kami.html">Hubungi Kami</a></li>
         </ul>
       </div>
     </div>
@@ -38,7 +38,8 @@
         <div class="col-md-6">
           <div class="p-4 bg-light rounded shadow-sm h-85">
             <h5>Kirim Pesan Kepada Kami</h5>
-              <form id="contactForm" action="config.php" method="POST" novalidate>
+            <form method="POST" action="{{ route('kontak.store') }}">
+                @csrf
                <div class="mb-3">
                 <label for="nama" class="form-label">Nama Perusahaan</label>
                 <input type="text" class="form-control" id="nama" required />

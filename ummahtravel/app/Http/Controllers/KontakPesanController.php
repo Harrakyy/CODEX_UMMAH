@@ -7,59 +7,43 @@ use Illuminate\Http\Request;
 
 class KontakPesanController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        //
+        return KontakPesan::all();
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate([
+            'nama_perusahaan' => 'required|string',
+            'nama_depan' => 'required|string',
+            'nama_belakang' => 'required|string',
+            'jabatan' => 'required|string',
+            'email' => 'required|email',
+            'nomor_telepon' => 'required|string',
+            'pesan' => 'required|string',
+        ]);
+
+        return KontakPesan::create($data);
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(KontakPesan $kontakPesan)
+    public function show($id)
     {
-        //
+        return KontakPesan::findOrFail($id);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(KontakPesan $kontakPesan)
+    public function update(Request $request, $id)
     {
-        //
+        $kontak = KontakPesan::findOrFail($id);
+        $kontak->update($request->only([
+            'nama_perusahaan', 'nama_depan', 'nama_belakang',
+            'jabatan', 'email', 'nomor_telepon', 'pesan'
+        ]));
+        return $kontak;
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, KontakPesan $kontakPesan)
+    public function destroy($id)
     {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(KontakPesan $kontakPesan)
-    {
-        //
+        return KontakPesan::destroy($id);
     }
 }
