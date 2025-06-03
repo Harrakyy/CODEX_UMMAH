@@ -5,24 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hubungi Kami</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="{{ asset('css/style3.css') }}" /> {{-- Using style3.css --}}
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@400;500;600&family=Scheherazade:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm w-100 z-3">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="#">Nasrotul Ummah</a>
+      <a class="navbar-brand arabic-logo" href="/">Nasrotul Ummah</a> {{-- Link to home route --}}
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
-          <li class="nav-item"><a class="nav-link" href="tentangkami.html">Tentang Kami</a></li>
-          <li class="nav-item"><a class="nav-link" href="daftarumroh.html">Daftar Umroh</a></li>
-          <li class="nav-item"><a class="nav-link" href="umrohsaya.html">Umroh Saya</a></li>
-          <li class="nav-item"><a class="nav-link active" href="hubungi-kami.html">Hubungi Kami</a></li>
+          <li class="nav-item"><a class="nav-link" href="/">Beranda</a></li> {{-- Link to home route --}}
+          <li class="nav-item"><a class="nav-link" href="/tentang-kami">Tentang Kami</a></li> {{-- Link to about us route --}}
+          <li class="nav-item"><a class="nav-link" href="/daftar-umroh">Daftar Umroh</a></li> {{-- Link to daftar umroh route --}}
+          <li class="nav-item"><a class="nav-link" href="/umroh-saya">Umroh Saya</a></li> {{-- Link to umroh saya route --}}
+          <li class="nav-item"><a class="nav-link active" href="/hubungi-kami">Hubungi Kami</a></li> {{-- Link to hubungi kami route --}}
         </ul>
       </div>
     </div>
@@ -38,8 +39,7 @@
         <div class="col-md-6">
           <div class="p-4 bg-light rounded shadow-sm h-85">
             <h5>Kirim Pesan Kepada Kami</h5>
-            <form method="POST" action="{{ route('kontak.store') }}">
-                @csrf
+            <form id="contactForm" novalidate>
                <div class="mb-3">
                 <label for="nama" class="form-label">Nama Perusahaan</label>
                 <input type="text" class="form-control" id="nama" required />

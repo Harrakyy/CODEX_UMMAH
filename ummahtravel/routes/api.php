@@ -1,6 +1,13 @@
 <?php
-use App\Http\Controllers\JamaahUmrohController;
-use App\Http\Controllers\KontakPesanController;
 
-Route::post('/jamaah', [JamaahUmrohController::class, 'store'])->name('jamaah.store');
-Route::post('/kontak', [KontakPesanController::class, 'store'])->name('kontak.store');
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\UmrohBookingController;
+
+Route::apiResource('umroh-bookings', UmrohBookingController::class);
+
+
+
+Route::get('/user', function (Request $request) {
+    return $request->user();
+})->middleware('auth:sanctum');

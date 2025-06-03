@@ -5,25 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nasrotul Ummah | Daftar Umroh</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style4.css">
-  <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ asset('css/style4.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@400;500;600&family=Scheherazade:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <!-- Navbar -->
  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top w-100 z-3">
     <div class="container">
-      <a class="navbar-brand arabic-logo" href="#">Nasrotul Ummah</a>
+      <a class="navbar-brand arabic-logo" href="/">Nasrotul Ummah</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
-          <li class="nav-item"><a class="nav-link" href="tentangkami.html">Tentang Kami</a></li>
-          <li class="nav-item"><a class="nav-link active" href="daftarumroh.html">Daftar Umroh</a></li>
-          <li class="nav-item"><a class="nav-link" href="umrohsaya.html">Umroh Saya</a></li>
-          <li class="nav-item"><a class="nav-link" href="hubungi-kami.html">Hubungi Kami</a></li>
+          <li class="nav-item"><a class="nav-link" href="/">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="/tentang-kami">Tentang Kami</a></li>
+          <li class="nav-item"><a class="nav-link active" href="/daftar-umroh">Daftar Umroh</a></li>
+          <li class="nav-item"><a class="nav-link" href="/umroh-saya">Umroh Saya</a></li>
+          <li class="nav-item"><a class="nav-link" href="/hubungi-kami">Hubungi Kami</a></li>
         </ul>
       </div>
     </div>
@@ -47,27 +47,27 @@
     
     <div class="card p-4 shadow-sm">
       <h5 class="mb-4">Form Jamaah Umroh</h5>
-      <form method="POST" action="{{ route('jamaah.store') }}">
-         @csrf
+      <form action="{{ route('umroh-saya.store') }}" method="POST">
+        @csrf
         <div class="mb-3">
           <label for="email" class="form-label">Email anda *</label>
-          <input type="email" class="form-control" id="email" placeholder="Email Anda" required>
+          <input type="email" class="form-control" id="email" name="email" placeholder="Email Anda" required>
         </div>
         <div class="row mb-3">
           <div class="col-md-6">
-            <label for="nama" class="form-label">Nama anda *</label>
-            <input type="text" class="form-control" id="nama" placeholder="Nama depan anda" required>
+            <label for="name" class="form-label">Nama anda *</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Nama depan anda" required>
           </div>
           <div class="col-md-6">
-            <label for="telepon" class="form-label">Nomor telepon *</label>
-            <input type="text" class="form-control" id="telepon" placeholder="Nomor Telepon" required>
+            <label for="phone" class="form-label">Nomor telepon *</label>
+            <input type="text" class="form-control" id="phone" name="phone" placeholder="Nomor Telepon" required>
           </div>
         </div>
         <div class="mb-3">
-          <label for="tanggal" class="form-label">Tanggal keberangkatan (dd/mm/yyyy)</label>
-          <input type="text" class="form-control" id="tanggal" placeholder="Tanggal Keberangkatan">
+          <label for="departure_date" class="form-label">Tanggal keberangkatan (dd/mm/yyyy)</label>
+          <input type="date" class="form-control" id="departure_date" name="departure_date">
         </div>
-        <a href="umrohsaya2.html" class="btn btn-success w-100" tabindex="-1" role="button" aria-disabled="true">Pesan</a>
+        <button type="submit" class="btn btn-success w-100">Pesan</button>
       </form>
     </div>
   </div>
@@ -99,6 +99,6 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="script4.js"></script>
+<script src="{{ asset('js/script4.js') }}"></script>
 </body>
-</html>
+</html> 
